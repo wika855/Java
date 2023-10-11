@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_siejka()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form> <textarea name="siejka" cols="80" rows="20" readonly>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div style="color: blue; font-size: 50px;">
+<script language="JavaScript">
+var a_ped = prompt("Podaj pierwszą liczbę =");
+var a = parseFloat(a_ped);
+var b_ped = prompt("Podaj drugą liczbę =");
+var b = parseFloat(b_ped);
+var m2_ped;
+
+m2_ped = Math.pow(a + b, 3);
+
+document.write("A=" + a + " B=" + b + "<br>");
+document.write("("+a+"+"+b+")" + "^3 = " + (Math.pow(a, 3) + 3 * a * a * b + 3 * a * b * b + Math.pow(b, 3)));
+</script>
+</div>
+</body>
+ 
+ </TEXTAREA>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
