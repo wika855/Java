@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ <head> 
+ <title> Użycie fukcji </title>
+ <meta charset="utf-8">
+ </head>
+<body>
+ <div style="color:navy;font-size:50px;">
+ <script language="JavaScript">
+ var a=parseFloat(prompt("a=",""));
+ var b=parseFloat(prompt("b=",""));
+ function suma_che(a, b) {
+ return a + b;
+ }
+ function odejmowanie_che(a, b) {
+ return a - b;
+ }
+ function mnożenie_che(a, b) {
+ return a * b;
+ }
+ function do_kwadratu_che(a, b) {
+ return  Math.pow(a,2);
+ return  Math.pow(b,2);
+ }
+ function reszta_z_dzielenia_a_przez_b_che(a, b) {
+ return a % b;
+ }
+ document.write("suma="+suma_che(a,b)+"<br>");
+ document.write("różnica="+odejmowanie_che(a,b)+"<br>");
+ document.write("iloczyn="+mnożenie_che(a,b)+"<br>");
+ document.write("kwadrat a="+do_kwadratu_che(a)+"<br>"+"kwadrat b="+do_kwadratu_che(b)+"<br>");
+ document.write("reszta z dzielenia="+reszta_z_dzielenia_a_przez_b_che(a,b)+"<br>");
+</script>
+</div>
+</body>
+</html>
