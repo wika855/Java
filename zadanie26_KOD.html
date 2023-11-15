@@ -1,0 +1,86 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_chechla()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form> <textarea name="chechla" cols="80" rows="20" readonly>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="styl.css">
+
+<html>
+<head>
+<title>
+Przykład obliczenia Pole i Obwód walca
+</title>
+<script language="JavaScript">
+function Pole(a,b,wys)
+{
+c=parseFloat(a)
+d=parseFloat(b)
+e=parseFloat(wys)
+Pow_chechla=c+d+(e/2)
+document.getElementsByName('pole')[0].value=Pow_chechla.toFixed(2); 
+alert("Pole="+Pow_chechla.toFixed(2)+" cm^2"); 
+pokaz1.innerHTML="Pole="+Pow_chechla.toFixed(2)+" cm^2"+"<br>"; 
+}
+function Obwod(a,b,wys)
+{
+c=parseFloat(a)
+d=parseFloat(b)
+e=parseFloat(wys)
+f=((d-c)*(d-c))+(e*e)
+Obw_chechla=c+d+(Math.sqrt(f)*2);
+document.getElementsByName('obw')[0].value=Obw_chechla.toFixed(2);
+alert("Obwod="+Obw_chechla.toFixed(2)+" cm");
+pokaz2.innerHTML="Obwod="+Obw_chechla.toFixed(2)+" cm"+"<br>";
+}
+function okno_zamknij_chechla()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+Obliczanie Pole i Obwód walca
+<br> <br>
+<form name="formularz" action="" onsubmit="Pole(this.bok_a.value,this.bok_b.value,this.wys.value); Obwod(this.bok_a.value,this.bok_b.value,this.wys.value);return false">
+Podaj a=
+<input size="6" name="bok_a">
+Podaj b=
+<input size="6" name="bok_b">
+Wysokosc=
+<input size="6" name="wys">
+<br> <br>
+<input type="submit" value="oblicz" >
+<br> <br>
+Pole=
+<input size="6" name="pole">
+Obwod=
+<input size="6" name="obw">
+</form>
+<table>
+<tr>
+<td id="pokaz1"></td>
+</tr>
+<tr>
+<td id="pokaz2"></td>
+</tr>
+</table>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_chechla()"/>
+</body>
+</html>
+ 
+ </TEXTAREA>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_chechla()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

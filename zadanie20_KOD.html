@@ -1,0 +1,66 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_chechla()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form> <textarea name="chechla" cols="80" rows="20" readonly>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+ function AB_che()
+ {
+var xa_che= parseFloat(document.getElementById('xa_che').value);
+var ya_che = parseFloat(document.getElementById('ya_che').value);
+var xb_che = parseFloat(document.getElementById('xb_che').value);
+var yb_che = parseFloat(document.getElementById('yb_che').value);
+var ab_che= Math.sqrt(((Math.pow((xb_che-xa_che),2))+(Math.pow((ya_che-yb_che),2))));
+document.getElementById("nazwa").innerHTML = "długość boku AB wynosi= "+ab_che.toFixed(2)+" cm";
+ }
+ function BC_che()
+ {var xb_che= parseFloat(document.getElementById('xb_che').value);
+  var yb_che = parseFloat(document.getElementById('yb_che').value);
+  var xc_che= parseFloat(document.getElementById('xc_che').value);
+  var yc_che = parseFloat(document.getElementById('yc_che').value);
+  var bc_che= Math.sqrt(((Math.pow((xc_che-xb_che),2))+(Math.pow((yb_che-yc_che),2))));
+  document.getElementById("nazwa").innerHTML = "długość boku BC wynosi= "+bc_che.toFixed(2)+" cm";
+ }
+ function AC_che()
+ {var xc_che= parseFloat(document.getElementById('xc_che').value);
+  var yc_che = parseFloat(document.getElementById('yc_che').value);
+  var xa_che= parseFloat(document.getElementById('xa_che').value);
+  var ya_che = parseFloat(document.getElementById('ya_che').value);
+  var ac_che= Math.sqrt(((Math.pow ((xa_che-xc_che),2))+(Math.pow((ya_che-yc_che),2))));
+  document.getElementById("nazwa").innerHTML = "długość boku AC wynosi= "+ac_che.toFixed(2)+" cm";
+ }
+
+</script>
+ <h1>Wszystko o KWADRACIE</h1><br><br>
+ Podaj pierwszą wspórzędną punkty a <input type="text" id="xa_che" value="x"> <br><br><br>
+ Podaj drugą wspórzędną punkty a <input type="text" id="ya_che" value="y"> <br><br><br>
+ Podaj pierwszą wspórzędną punkty b <input type="text" id="xb_che" value="x"> <br><br><br>
+ Podaj drugą wspórzędną punkty b <input type="text" id="yb_che" value="y"> <br><br><br>
+ Podaj pierwszą wspórzędną punkty c <input type="text" id="xc_che" value="x"> <br><br><br>
+ Podaj drugą wspórzędną punkty c <input type="text" id="yc_che" value="y"> <br><br><br>
+ <input type="button" name="dlugoscAB" value="Długość boku AB" Onclick="AB_che()"><br><br>
+ <input type="button" name="dlugoscBC" value="Długość boku BC" Onclick="BC_che()"><br><br>
+ <input type="button" name="dlugoscAC" value="Długość boku AC" Onclick="AC_che()"><br><br>
+ <div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
+ 
+ </TEXTAREA>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_chechla()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
