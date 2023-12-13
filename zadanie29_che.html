@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<html>
+  <HEAD>
+    <meta charset="utf-8">
+    <title>Pytania teorytyczne</title>
+	<style type="text/css">
+	#pytanie {
+	font-size: 15pt;
+	}
+	
+	#odpowiedz {
+	font-size: 12pt;
+	}
+ </style>
+  </head>
+  <body>
+    <p id="pytanie">1)<h2>1) W jaki sposób można określić właściwość danego obiektu ( dwa sposoby wraz z przykładami)? (odpowiedź poniżej)</h2></p>
+    <p id="odpowiedz">
+	Sposób 1<br>
+    Używając zapisu postaci:<br>
+    a)<br>
+    <b>nazwa_obiektu.nazwa_właściwości="tekst"; -></b> dla właściwości typu tekstowego<br>
+    np.<br>
+    auto.marka="Opel Omega";<br>
+    b)<br>
+    <b>nazwa_obiektu.nazwa_właściwości=liczba; -></b> dla właściwości typu liczbowego<br>
+    np.<br>
+    auto.rok=1996;<br>
+    auto.cena=25000;<br>
+    <b>Sposób 2</b><br>
+    używając zapisu postaci:<br>
+    <b>nazwa_obiektu[nazwa_właściwości];</b><br>
+    np. auto[cena]=25000;</p><br>
+ 
+    <p id="pytanie"><h2>2) W jaki sposób można odwołać się do pól (właściwości) i metod? (odpowiedź poniżej)</h2></p>
+    <p id="odpowiedz">Do <u>właściwości i metod</u> można się odwołać podobnie jak do zwykłych zmiennych<br>
+    i funkcji, trzeba tylko przed ich nazwą umieścić nazwę obiektu, którego są elementami<br>
+    (np. zmienną, która przechowuje dany obiekt), i <u>kropkę.</u><br><br>
+    np. console.log(samochod1.kolor); -> wyświetla kolor obiektu samochod</p><br>
+
+    <p id="pytanie"><h2>3) Wymień cechy charakterystyczne konstruktora. (odpowiedź poniżej)</h2></p>
+    <p id="odpowiedz"><ul>
+	<li>jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na rzecz tego obiektu,
+    <li>nazywa się tak samo jak klasa,
+    <li>nie zwraca żadnej wartości ,
+    <li>może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do życia obiekt za pomocą operatora new.</ul></p><br>
+
+    <p id="pytanie"><h2>4) Konstruowanie obiektu na podstawie przykładu->obiekt ma trzy pola oraz jedną metodę.</h2></p>
+    <p id="odpowiedz">var osoba_1 =<br>
+    {<br>
+    nazwisko&nbsp:‘Kowalski’,<br>
+    imie&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:’Jan’,<br>
+    zawod&nbsp&nbsp&nbsp&nbsp&nbsp:’piekarz’,<br>
+    wyświetl&nbsp:function ()<br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{<br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDocument.write(this.nazwisko + ‘ ‘ + this.imie)<br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+    }
+	</p><br>
+
+    <p id="pytanie"><h2>5) Znaczenie słowa <b>this.</b> Jak oddzielamy pola oraz metody? (odpowiedź poniżej)</h2></p>
+    <p id="odpowiedz">Słowo kluczowe <b>this -></b> pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu.</p><br>
+
+    <p id="pytanie"><h2>6) Konstruktor w JS na podstawie przykładu wraz z opisem.</h2></p>
+    <p id="odpowiedz">Zamiast klas, JavaScript stosuje funkcje. Zdefiniowanie klasy ogranicza się do prostej czynności, jaką<br>
+	jest zdefiniowanie funkcji, która pełni funkcję klasy. Tak działa JS jest ponieważ JavaScript jest<br>
+	językiem opartym na prototypie, w którym nie występuje pojęcie klasy, w przeciwieństwie do<br>
+	języków takich, jak C++ czy Java. Fakt ten bywa dezorientujący dla programistów przyzwyczajonych<br>
+	do języków z pojęciem klasy<br>
+	<h4>Przykład:</h4>
+	Zostanie utworzony konstruktor o nazwie klient z właściwościami nazwisko, imie, zawod oraz<br>
+	metodą wypisz(). Właściwościom obiektu zostały przypisane wartości parametrów. Użyte słowo<br>
+	kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do<br>
+	odpowiedniego pola tego obiektu.<br><br>
+    function klient(nazwisko_k,imie_k,zawod_k)<br>
+    {<br>
+    &nbsp&nbspthis.nazwisko=nazwisko_k;<br>
+    &nbsp&nbspthis.imie=imie_k;v
+    &nbsp&nbspthis.zawod=zawod_k;<br><br>
+    &nbsp&nbspwypisz = function ()<br>
+    &nbsp&nbsp&nbsp&nbsp{<br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbspalert(this.nazwisko + ' ' + this.imie)<br>
+    &nbsp&nbsp&nbsp&nbsp}<br>
+    }</p><br>
+
+    <p id="pytanie"><h2>7) Znaczenie słowa kluczowego <b>New</b> wraz z przykładem.</h2></p>
+    <p id="odpowiedz"><b>Słowo kluczowe new</b><br>
+    Do utworzenia <u><b>nowego obiektu</b></u> na podstawie konstruktora stosowane jest słowo kluczowe new.<br><br>
+    Przykład<br>
+    var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');<br>
+    var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');<br><br>
+    Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient.</p><br>
+
+    <p id="pytanie"><h2>8) Znaczenie słowa kluczowego <b>prototype</b> wraz z przykładem i opisem ( szczególnie ważny tekst pogrubiony).</h2></p>
+    <p id="odpowiedz"><u><b>Właściwość prototype</b></u><br><br>
+    Do definowania metod i właściwości dla obiektu jest wykorzystana właściwości prototype.<br><br>
+    <u>Przykład</u><br>
+    function klient()<br>
+    {<br>
+    this.nazwisko='Bielski';<br>
+    this.imie='Paweł';<br>
+    }<br>
+    klient.prototype.pisz_dane = function ()<br>
+    &nbsp&nbsp{<br>
+    &nbsp&nbsp&nbspdocument.write(this.nazwisko + ' ' + this.imie)<br>
+    &nbsp&nbsp}<br>
+    klient.prototype.zawod = 'kierowca';<br>
+    var osoba1 = new klient();<br>
+    osoba1.pisz_dane();<br><br>
+	<u>Opis do przykładu powyżej:</u><br><br>
+    W definicji konstruktora nie zostały zadeklarowane żadne metody i właściwości. Dopiero po użyciu<br>
+	właściwości prototype została dodana metoda pisz_dane oraz właściwość zawod. Od tej pory każdy<br>
+	nowo tworzony obiekt na podstawie konstruktora klient będzie posiadał tę dodatkową właściwość<br>
+	i metodę.<br><br>
+    <b>Właściwość prototype może być również wykorzystana do dodawania dodatkowych<br>
+	metod lub właściwości do istniejących obiektów.<b>
+	</p><br>
+    <br><br>
+  </body>
+</html>
