@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+</head>
+<body>
+ <script>
+    document.write("Pierwszy sposób"+"<br>");
+    document.write("mam przeglądarkę= "+navigator.appName+"<br>"+"<br>");
+
+    document.write("Drugi sposób"+"<br>");
+if((navigator.appName=="Firefox") && (parseInt(navigator.appVersion)>=3))
+ { document.write("mam przeglądarkę="+navigator.appName);} 
+ else 
+ {document.write("Masz niewłaściwą wersję przeglądarki!!!");}
+ </script> 
+</body>
+</html>
+

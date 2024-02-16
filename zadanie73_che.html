@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+        <meta charset="UTF-8">
+<script type="text/javascript">
+function wyswietlDate(){
+ var Today = new Date();
+ var Month = (Today.getMonth()+1);
+ var Day = Today.getDate();
+ var Year = Today.getFullYear();
+ if(Year <= 99) Year += 1900
+ return Day + ":" + Month + ":" + Year;
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+ document.write("Wiktoria Chechła dzisiaj jest: " + wyswietlDate());
+ </script>
+</body>
+</html>
