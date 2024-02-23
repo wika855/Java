@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie JavaScript</title>
+    <meta charset="utf-8">
+    <style>
+        h1 {
+            text-transform: uppercase;
+        }
+
+        #wynik {
+            margin-top: 20px;
+            color: green;
+            font-size: 18px;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Proste działania</h1>
+    <label for="a">Podaj pierwszą liczbę:</label> 
+    <input type="number" id="a">
+    <br><br>
+    <label for="b">Podaj drugą liczbę:</label> 
+    <input type="number" id="b">
+    <br><br>
+    <input type="button" value="DODAWANIE" onclick="suma()">
+    <input type="button" value="ODEJMOWANIE" onclick="roznica()">
+    <input type="button" value="MNOŻENIE" onclick="iloczyn()">
+    <input type="button" value="DZIELENIE" onclick="iloraz()">
+    <div id="wynik"></div>
+
+    <script>
+        function suma() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+
+            if (isNaN(a) || isNaN(b)) {
+                showError("Uzupełnij obie liczby.");
+            } else {
+                var result = a + b;
+                showResult(result);
+            }
+        }
+
+        function roznica() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+
+            if (isNaN(a) || isNaN(b)) {
+                showError("Uzupełnij obie liczby.");
+            } else {
+                var result = a - b;
+                showResult(result);
+            }
+        }
+
+        function iloczyn() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+
+            if (isNaN(a) || isNaN(b)) {
+                showError("Uzupełnij obie liczby.");
+            } else {
+                var result = a * b;
+                showResult(result);
+            }
+        }
+
+        function iloraz() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+
+            if (isNaN(a) || isNaN(b)) {
+                showError("Uzupełnij obie liczby.");
+            } else {
+                if (b === 0) {
+                    showError("Nie wolno dzielić przez zero.");
+                } else {
+                    var result = a / b;
+                    showResult(result);
+                }
+            }
+        }
+
+        function showResult(result) {
+            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + result;
+            document.getElementById("wynik").className = "";
+        }
+
+        function showError(errorMessage) {
+            document.getElementById("wynik").innerHTML = errorMessage;
+            document.getElementById("wynik").className = "error";
+        }
+    </script>
+</body>
+</html>

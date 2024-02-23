@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sprawdzenie trójkąta</title>
+</head>
+<body>
+    <div style="color:rgb(110, 140, 224); font-size:50px;">
+    <script>
+        var a, b, c;
+        
+
+        do {
+            a = parseFloat(prompt("Podaj długość boku a:"));
+        } while (isNaN(a) || a <= 0);
+
+        do {
+            b = parseFloat(prompt("Podaj długość boku b:"));
+        } while (isNaN(b) || b <= 0);
+
+        do {
+            c = parseFloat(prompt("Podaj długość boku c:"));
+        } while (isNaN(c) || c <= 0);
+
+        
+        var warunek1 = a + b > c;
+        var warunek2 = a + c > b;
+        var warunek3 = b + c > a;
+
+       
+        if (warunek1 && warunek2 && warunek3) {
+            document.write("Podane długości boków tworzą trójkąt.");
+        } else {
+            document.write("Podane długości boków nie spełniają warunków trójkąta.");
+        }
+    </script>
+</body>
+</html>
