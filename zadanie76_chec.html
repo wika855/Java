@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria Obiektu Location</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f0f0;
+            margin: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            background: linear-gradient(45deg, #24b8ff, #274cac);
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+
+        h3 {
+            background: #3498db;
+            color: #fff;
+            padding: 10px;
+            margin: 0;
+            border-radius: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        h3, p, ul {
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Teoria Obiektu Location</h2>
+<br>
+    <h3>Ogólna postać lokalizatora URL:</h3>
+    <p><code>protocol://host:port/path#fragment?query</code></p>
+
+    <h3>Właściwości obiektu location:</h3>
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>Znaczenie</th>
+            <th>Dostępność</th>
+        </tr>
+        <tr>
+            <td>Hash</td>
+            <td>Część adresu URL znajdująca się za znakiem #.</td>
+            <td>FF, IE3, NN2, OP7</td>
+        </tr>
+        <tr>
+            <td>Host</td>
+            <td>Część adresu URL zawierająca nazwę hosta oraz numer portu.</td>
+            <td>FF, IE3, NN2, OP7</td>
+        </tr>
+        <tr>
+            <td>Hostname</td>
+            <td>Część adresu URL zawierająca nazwę hosta.</td>
+            <td>FF, IE3, NN2, OP7</td>
+        </tr>
+        <tr>
+            <td>Href</td>
+            <td>Pełny adres URL.</td>
+            <td>FF, IE3, NN2, OP7</td>
+        </tr>
+        <tr>
+            <td>Pathname</td>
+            <td>Część adresu URL zawierająca ścieżkę dostępu i nazwę pliku.</td>
+            <td>FF, IE3, NN2, OP7</td>
+        </tr>
+        <tr>
+            <td>Port</td>
+            <td>Część adresu URL zawierająca numer portu.</td>
+            <td>FF, IE3, NN2, OP7</td>
+        </tr>
+        <tr>
+            <td>Protocol</td>
+            <td>Część adresu URL zawierająca nazwę protokołu (np. http, ftp).</td>
+            <td>FF, IE3, NN2, OP7</td>
+        </tr>
+        <tr>
+            <td>Search</td>
+            <td>Część adresu URL znajdująca się za znakiem zapytania.</td>
+            <td>FF, IE3, NN2, OP7</td>
+        </tr>
+    </table>
+
+    <h3>Metody obiektu location:</h3>
+    <ul>
+        <li><code>assign(url)</code>: Wczytuje dokument o adresie wskazanym przez argument <code>url</code>.</li>
+        <li><code>reload(force)</code>: Wymusza ponowne wczytanie bieżącej strony.</li>
+        <li><code>replace(url)</code>: Zastępuje bieżący dokument przez wczytany spod adresu wskazanego przez argument <code>url</code>.</li>
+        <li><code>toString()</code>: Przekształca zawartość obiektu location w ciąg znaków reprezentujący przechowywany przez niego adres URL.</li>
+    </ul>
+
+    <h3>Różnica między <code>assign</code> a <code>replace</code>:</h3>
+    <p>W przeciwieństwie do metody <code>assign</code>, po zastosowaniu <code>replace</code> bieżąca strona nie zostanie zapisana w historii przeglądanych witryn, co oznacza, że nie będzie można do niej powrócić poprzez przycisk Wstecz bądź history.go(-1).</p>
+
+    <h3>Przykładowe właściwości i metody obiektu location:</h3>
+    <ul>
+        <li><code>window.location.href</code>: Przechowuje pełny adres URL.</li>
+        <li><code>window.location.hostname</code>: Zawiera wyłącznie domenę.</li>
+        <li><code>window.location.reload()</code>: Odświeża stronę.</li>
+        <li><code>window.location.assign()</code>: Przechodzi na podany adres.</li>
+        <li><code>window.location.replace()</code>: Przechodzi na podany adres i nie tworzy nowego wpisu w historii przeglądania.</li>
+    </ul>
+</body>
+</html>
